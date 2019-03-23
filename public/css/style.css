@@ -764,7 +764,7 @@ b, strong {
 }
 
 .mark {
-  background: rgba(44, 130, 174, 0.8);
+  background: rgba(0, 170, 201, 0.8);
   color: #232328;
   padding: 1px 2px;
   -webkit-transition: all 0.2s ease;
@@ -774,7 +774,7 @@ b, strong {
   .mark:hover {
     background: #2c82ae; }
   .mark.disabled {
-    background: rgba(44, 130, 174, 0.5);
+    background: rgba(0, 170, 201, 0.5);
     cursor: default; }
 
 
