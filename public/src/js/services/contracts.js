@@ -10,6 +10,7 @@ angular.module('insight.contracts')
 
 		var CONTRACT_CALL = 194;
 		var CONTRACT_CREATE = 193;
+		var CONTRACT_CALL_SENDER = 196;
 
 		return {
 			isValidQtumAddress: function (address) {
@@ -131,12 +132,21 @@ angular.module('insight.contracts')
 				try {
 
 					var script = QtumCoreLib.Script(hex);
+					var sender = false;
 
 					if (script.chunks && script.chunks.length) {
 
 						for(var k=0; k < script.chunks.length; k++) {
 
-							if (script.chunks[k] && script.chunks[k]['opcodenum'] && [CONTRACT_CALL, CONTRACT_CREATE].indexOf(script.chunks[k]['opcodenum']) !== -1) {
+							if (script.chunks[k] && script.chunks[k]['opcodenum'] && [CONTRACT_CALL_SENDER].indexOf(script.chunks[k]['opcodenum']) !== -1) {
+								sender = true;
+							}
+
+							if (script.chunks[k] && script.chunks[k]['opcodenum'] && [CONTRACT_CALL].indexOf(script.chunks[k]['opcodenum']) !== -1 && sender) {
+
+								return script.chunks[8]['buf'].toString('hex');
+
+							} else if (script.chunks[k] && script.chunks[k]['opcodenum'] && [CONTRACT_CALL, CONTRACT_CREATE].indexOf(script.chunks[k]['opcodenum']) !== -1) {
 
 								switch (script.chunks[k]['opcodenum']) {
 									case CONTRACT_CALL:
