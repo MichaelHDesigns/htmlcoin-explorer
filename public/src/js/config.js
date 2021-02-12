@@ -11,7 +11,7 @@ angular.module('insight')
 	},
 	QRCOLOR : { 
 		color: '#232328',
-		background: '#2e9ad0'
+		background: '#eec61c'
 	},
 	BLOCKS_AMOUNT: 15,
 	TRANSACTION_DISPLAYED: 10,

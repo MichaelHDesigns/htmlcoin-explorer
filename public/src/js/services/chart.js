@@ -11,10 +11,10 @@ angular.module('insight.chart')
                 datasetOverride : [{
                     defaultFontFamily: 'SimplonMono',
                     yAxisID: 'y-axis-1' ,
-                    borderColor: '#2e9ad0',
+                    borderColor: '#eec61c',
                     borderWidth: 1,
-                    pointBorderColor: '#2e9ad0',
-                    pointBackgroundColor: '#2e9ad0',
+                    pointBorderColor: '#eec61c',
+                    pointBackgroundColor: '#eec61c',
                     pointBorderWidth: 0,
                     pointRadius: 0,
                     pointHoverBackgroundColor: '#e75647',

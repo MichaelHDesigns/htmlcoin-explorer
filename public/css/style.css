@@ -363,7 +363,7 @@ sub {
 
 .icon-angular .path1:before {
   content: "\e900";
-  color: #2e9ad0; }
+  color: #eec61c; }
 
 .icon-angular .path2:before {
   content: "\e901";
@@ -378,7 +378,7 @@ sub {
 .icon-angular .path4:before {
   content: "\e903";
   margin-left: -0.9501953125em;
-  color: #2e9ad0; }
+  color: #eec61c; }
 
 .icon-angular .path5:before {
   content: "\e904";
@@ -764,7 +764,7 @@ b, strong {
 }
 
 .mark {
-  background: rgba(44, 130, 174, 0.8);
+  background: rgba(0, 170, 201, 0.8);
   color: #232328;
   padding: 1px 2px;
   -webkit-transition: all 0.2s ease;
@@ -774,7 +774,7 @@ b, strong {
   .mark:hover {
     background: #2c82ae; }
   .mark.disabled {
-    background: rgba(44, 130, 174, 0.5);
+    background: rgba(0, 170, 201, 0.5);
     cursor: default; }
 
 
